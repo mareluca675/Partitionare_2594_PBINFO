@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+typedef unsigned int ust;
+typedef short sr;
+
+vector<int> A, B;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    ust n;
+    cin >> n;
+
+    for(ust i = 1; i <= n; ++ i){
+        ust num;
+        cin >> num;
+
+        if(num % 2 == 0){
+            A.push_back(num);
+        }
+        else{
+            B.push_back(num);
+        }
+    }
+    
+    sort(A.begin(), A.end());
+    sort(B.begin(), B.end());
+    
+    for(auto& num : A){
+        cout << num << ' ';
+    }
+
+    for(auto& num : B){
+        cout <<  num << ' ';
+    }
+    
+    return 0;
+}
